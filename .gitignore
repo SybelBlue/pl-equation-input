@@ -1,0 +1,13 @@
+# MacOS temp files
+.DS_Store
+
+# Python build artifacts
+.venv
+**/__pycache__
+**/*.egg-info
+**/.pytest_cache
+**/.ruff_cache
+
+# JS dev dependency caches
+node_modules
+.pnpm-store
