@@ -1,0 +1,18 @@
+{
+  "engines": {
+    "pnpm": "^11.19.0"
+  },
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "^11.19.0",
+      "onFail": "warn"
+    }
+  },
+  "devDependencies": {
+    "prettier": "^3.9.6",
+    "prettier-plugin-mustache": "^0.1.6",
+    "prettier-plugin-organize-attributes": "^1.0.0",
+    "template-format-core": "^0.1.1"
+  }
+}

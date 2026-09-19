@@ -1,0 +1,17 @@
+{
+  "recommendations": [
+    "Tobermory.es6-string-html",
+    "charliermarsh.ruff",
+    "editorconfig.editorconfig",
+    "esbenp.prettier-vscode",
+    "davidanson.vscode-markdownlint",
+    "dbaeumer.vscode-eslint",
+    "ms-python.python",
+    "ms-python.vscode-pylance",
+    "redhat.vscode-yaml",
+    "reteps.htmlmustache-lsp",
+    "tamasfe.even-better-toml",
+    "sybelblue.prairielearn-navigator",
+    "github.vscode-pull-request-github"
+  ]
+}

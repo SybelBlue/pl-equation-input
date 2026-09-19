@@ -1,0 +1,79 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "properties": {
+    "allow-inequalities": {
+      "default": "false",
+      "enum": ["true", "false"]
+    },
+    "answers-name": {},
+    "correct-answer": {},
+    "display": {
+      "default": "inline",
+      "enum": ["inline", "block"]
+    },
+    "formula-editor": {
+      "enum": ["true", "false"]
+    },
+    "grading-method": {
+      "description": "How the relation is graded: exact compares canonical sides with valid swaps and negations, equivalent compares real solution sets, component grades the three visible parts, and none records without grading.",
+      "default": "equivalent",
+      "enum": [
+        "exact",
+        "equivalent",
+        "component",
+        "none"
+      ]
+    },
+    "label": {},
+    "lhs-relative-weight": {
+      "description": "Relative weight of an exact positional left-hand-side match in component grading.",
+      "default": 1,
+      "minimum": 0,
+      "type": "integer"
+    },
+    "operator-relative-weight": {
+      "description": "Relative weight of an exact operator match in component grading.",
+      "default": 1,
+      "minimum": 0,
+      "type": "integer"
+    },
+    "rhs-relative-weight": {
+      "description": "Relative weight of an exact positional right-hand-side match in component grading.",
+      "default": 1,
+      "minimum": 0,
+      "type": "integer"
+    },
+    "size": {
+      "default": 35,
+      "type": "integer"
+    },
+    "variables": {},
+    "weight": {
+      "default": 1,
+      "type": "integer"
+    }
+  },
+  "required": ["answers-name"],
+  "allOf": [
+    {
+      "not": {
+        "properties": {
+          "lhs-relative-weight": {
+            "const": 0
+          },
+          "operator-relative-weight": {
+            "const": 0
+          },
+          "rhs-relative-weight": {
+            "const": 0
+          }
+        },
+        "required": [
+          "lhs-relative-weight",
+          "operator-relative-weight",
+          "rhs-relative-weight"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+name: Update PrairieLearn pin
+
+on:
+  workflow_dispatch:
+    inputs:
+      ref:
+        description: PrairieLearn branch, tag, or commit
+        required: true
+        default: master
+        type: string
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v6
+
+      - name: Install dependencies
+        run: uv sync --locked
+
+      - name: Update PrairieLearn pin
+        env:
+          PL_REF: ${{ inputs.ref }}
+        run: make update-prairielearn-pin PL_REF="$PL_REF"
+
+      - name: Validate update
+        run: make ci-dryrun
+
+      - name: Create update pull request
+        uses: peter-evans/create-pull-request@v8.1.1
+        with:
+          branch: automation/update-prairielearn-pin
+          delete-branch: true
+          commit-message: Update pinned PrairieLearn source
+          title: Update pinned PrairieLearn source
+          body: |
+            Updates the vendored `pl-symbolic-input`, Python source revision, and lockfile
+            to the PrairieLearn ref `${{ inputs.ref }}`.

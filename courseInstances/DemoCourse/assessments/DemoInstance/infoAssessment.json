@@ -1,0 +1,43 @@
+{
+  "uuid": "3d544979-cf71-42a2-99f7-90ea25afc93d",
+  "type": "Exam",
+  "title": "Demo Quiz",
+  "set": "Quizzes",
+  "module": "demo",
+  "allowAccess": [],
+  "number": "1",
+  "zones": [
+    {
+      "questions": [
+        {
+          "id": "s.1",
+          "points": 10
+        },
+        {
+          "id": "s.2",
+          "points": 10
+        },
+        {
+          "id": "s.3",
+          "points": 10
+        },
+        {
+          "id": "s.4",
+          "points": 10
+        },
+        {
+          "id": "s.5",
+          "points": 10
+        },
+        {
+          "id": "s.6",
+          "points": 10
+        },
+        {
+          "id": "qa",
+          "points": 10
+        }
+      ]
+    }
+  ]
+}

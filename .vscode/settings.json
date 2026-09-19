@@ -1,0 +1,96 @@
+{
+  // This is required to load prettier extensions
+  // https://github.com/prettier/prettier-vscode/issues/3235
+  "prettier.configPath": ".prettierrc.json",
+
+  "[python]": {
+    "editor.defaultFormatter": "charliermarsh.ruff",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll": "explicit",
+      "source.organizeImports": "explicit"
+    }
+  },
+  "[javascript][typescript][javascriptreact][typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "explicit"
+    }
+  },
+  "[html][css][scss][json][jsonc][yaml][github-actions-workflow][sql][markdown][toml][shellscript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[json]": {
+    "files.insertFinalNewline": true
+  },
+  "files.associations": {
+    "**/questions/**/question.html": "htmlmustache"
+  },
+  "knip.configFilePath": ".knip.ts",
+  "knip.requireConfig": true,
+  "json.schemaDownload.enable": true,
+  "json.schemas": [
+    {
+      "fileMatch": [
+        "**/courseInstances/**/assessments/**/infoAssessment.json"
+      ],
+      "url": ".prairielearn/schemas/infoAssessment.json"
+    },
+    {
+      "fileMatch": [
+        "**/courseInstances/**/infoCourseInstance.json"
+      ],
+      "url": ".prairielearn/schemas/infoCourseInstance.json"
+    },
+    {
+      "fileMatch": [
+        "**/infoCourse.json"
+      ],
+      "url": ".prairielearn/schemas/infoCourse.json"
+    },
+    {
+      "fileMatch": [
+        "**/questions/**/info.json"
+      ],
+      "url": ".prairielearn/schemas/infoQuestion.json"
+    },
+    {
+      "fileMatch": [
+        "elements/**/info.json"
+      ],
+      "url": ".prairielearn/schemas/infoElementCourse.json"
+    },
+    {
+      "fileMatch": [
+        "elementExtensions/**/info.json"
+      ],
+      "url": ".prairielearn/schemas/infoElementExtension.json"
+    }
+  ],
+  "python.testing.pytestArgs": [
+    // "apps/prairielearn/elements",
+    // "apps/prairielearn/python/test"
+  ],
+  "python.testing.unittestEnabled": false,
+  "python.testing.pytestEnabled": true,
+  // https://squidfunk.github.io/mkdocs-material/creating-your-site/#minimal-configuration
+  "yaml.schemas": {
+    "https://squidfunk.github.io/mkdocs-material/schema.json": "mkdocs.yml"
+  },
+  "yaml.customTags": [
+    "!ENV scalar",
+    "!ENV sequence",
+    "!relative scalar",
+    "tag:yaml.org,2002:python/name:material.extensions.emoji.to_svg",
+    "tag:yaml.org,2002:python/name:material.extensions.emoji.twemoji",
+    "tag:yaml.org,2002:python/name:pymdownx.superfences.fence_code_format",
+    "tag:yaml.org,2002:python/object/apply:pymdownx.slugs.slugify mapping"
+  ],
+  // This conflicts with the Prettier formatter, so we disable it.
+  "yaml.format.enable": false,
+  "[toml]": {
+    "editor.defaultFormatter": "tamasfe.even-better-toml"
+  }
+}

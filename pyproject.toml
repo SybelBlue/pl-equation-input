@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pl-equation-input"
+version = "1.0.0"
+description = "A PrairieLearn element for symbolic equations and inequalities"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.13"
+dependencies = ["prairielearn", "chevron", "lxml"]
+
+[tool.uv.sources.prairielearn]
+git = "https://github.com/PrairieLearn/PrairieLearn.git"
+rev = "14e65830861bee4cfe10c3ef73b000794edd66ed" # delibrately pinned for vendored pl-symbolic-input
+subdirectory = "apps/prairielearn/python"
+
+
+[dependency-groups]
+dev = ["ipython", "pyright", "pytest", "ruff"]
+
+[tool.pyright]
+include = ["elements", "questions", "scripts", "src"]
+exclude = ["**/vendor", "**/node_modules", "**/__pycache__", "**/.*", ".venv"]
+
+[tool.ruff]
+exclude = ["**/vendor", "scripts/prompts/output"]

@@ -1,0 +1,88 @@
+<pl-question-panel>
+  <h2><code>pl-equation-input</code> examples</h2>
+  <p>Use this page to exercise the principal rendering and grading configurations.</p>
+</pl-question-panel>
+
+<div class="table-responsive">
+  <table class="table table-bordered align-middle">
+    <thead>
+      <tr>
+        <th scope="col">Configuration</th>
+        <th scope="col">Input</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">Equivalent equation</th>
+        <td>
+          <pl-equation-input
+            answers-name="equivalent"
+            correct-answer="y = 2*x + 1"
+            variables="x, y"
+          ></pl-equation-input>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">Formula editor</th>
+        <td>
+          <pl-equation-input
+            answers-name="formula-editor"
+            correct-answer="x**2 = y"
+            formula-editor="true"
+            variables="x, y"
+          ></pl-equation-input>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">Inequality</th>
+        <td>
+          <pl-equation-input
+            answers-name="inequality"
+            allow-inequalities="true"
+            correct-answer="x &lt;= 4"
+            formula-editor="true"
+            variables="x"
+          ></pl-equation-input>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">Exact grading</th>
+        <td>
+          <pl-equation-input
+            answers-name="exact"
+            correct-answer="x + 1 = y"
+            grading-method="exact"
+            variables="x, y"
+          ></pl-equation-input>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">Component grading</th>
+        <td>
+          <pl-equation-input
+            answers-name="component"
+            correct-answer="x + 1 = y"
+            grading-method="component"
+            lhs-relative-weight="2"
+            operator-relative-weight="0"
+            rhs-relative-weight="1"
+            variables="x, y"
+          ></pl-equation-input>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">Ungraded block input</th>
+        <td>
+          <pl-equation-input
+            answers-name="ungraded"
+            allow-inequalities="true"
+            display="block"
+            grading-method="none"
+            label="Model:"
+            variables="x, y"
+          ></pl-equation-input>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

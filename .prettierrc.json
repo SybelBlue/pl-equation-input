@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json.schemastore.org/prettierrc.json",
+  "singleQuote": true,
+  "printWidth": 100,
+  "attributeGroups": [
+    "^answers-name$",
+    "$DEFAULT"
+  ],
+  "attributeSort": "ASC",
+  "plugins": [
+    "prettier-plugin-mustache",
+    "prettier-plugin-organize-attributes"
+  ],
+  "overrides": [
+    {
+      "files": "*.jsonc",
+      "options": {
+        "trailingComma": "none"
+      }
+    },
+    {
+      "files": "*.json",
+      "options": {
+        "trailingComma": "none",
+        "printWidth": 40
+      }
+    },
+    {
+      "files": "*.html",
+      "options": {
+        "parser": "mustache"
+      }
+    }
+  ]
+}

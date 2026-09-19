@@ -1,0 +1,36 @@
+{
+  "name": "pl-equation-input demo",
+  "title": "Demo pl-equation-input Course",
+  "timezone": "America/Los_Angeles",
+  "assessmentModules": [
+    {
+      "name": "demo",
+      "heading": "Element examples"
+    }
+  ],
+  "topics": [
+    {
+      "name": "Equations and inequalities",
+      "color": "blue3",
+      "description": "Examples of symbolic relations entered with pl-equation-input."
+    }
+  ],
+  "tags": [
+    {
+      "name": "Under Construction!",
+      "color": "red2",
+      "description": "There problem isn't finished yet! Don't use it!"
+    },
+    {
+      "name": "Manual Grading!",
+      "color": "red1",
+      "description": "Hand or AI grading is required."
+    },
+    {
+      "name": "Limited Randomness!",
+      "color": "orange3",
+      "description": "This question has fewer than five variants."
+    }
+  ],
+  "sharingSets": []
+}
