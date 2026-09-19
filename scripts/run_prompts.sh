@@ -4,7 +4,7 @@ set -euo pipefail
 # git add scripts/prompts
 # git commit -m "Add publication-readiness agent prompts"
 
-base_dir="/private/tmp/pl-big-operator-agents-$$"
+base_dir="/private/tmp/pl-equation-agents-$$"
 
 git worktree add -b audit/test-inventory \
   "$base_dir/test-inventory" HEAD
