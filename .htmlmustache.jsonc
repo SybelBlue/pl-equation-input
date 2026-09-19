@@ -1,5 +1,6 @@
 {
   "include": ["**/*.mustache", "**/question.html"],
+  "exclude": ["**/vendor/**"],
   "rules": {
     "preferMustacheComments": "warning",
     "customTagSchema": "error",
